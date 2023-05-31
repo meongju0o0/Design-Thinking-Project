@@ -7,7 +7,7 @@ import android.widget.Button
 class MainActivity_Juyeong : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main_juyeong)
 
         val login: Button = findViewById(R.id.login)
         val time: Button = findViewById(R.id.time)
