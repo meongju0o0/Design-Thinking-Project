@@ -3,12 +3,14 @@ package com.example.dt
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.content.Intent
 
 class MainActivity_Juyeong : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_juyeong)
-
+        
+        // button 변수 선언
         val login: Button = findViewById(R.id.login)
         val time: Button = findViewById(R.id.time)
         val use_time: Button = findViewById(R.id.use_time)
@@ -22,7 +24,9 @@ class MainActivity_Juyeong : AppCompatActivity() {
         val present: Button = findViewById(R.id.present)
 
         login.setOnClickListener {
-            // Button 클릭 시 수행할 작업
+            // login 기능
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
         }
 
         time.setOnClickListener {
