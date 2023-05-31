@@ -1,14 +1,25 @@
 package com.example.dt
 
 import androidx.appcompat.app.AppCompatActivity
+import android.app.TimePickerDialog
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import android.content.Intent
+import android.content.Context
+import android.content.SharedPreferences
+
+import java.util.*
 
 class MainActivity_Juyeong : AppCompatActivity() {
+    // SharedPreferences: 클래스 간에 공유되는 변수 저장
+    private lateinit var sharedPreferences: SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_juyeong)
+        
+        // sharedPreferences 객체 선언
+        sharedPreferences = getSharedPreferences("com.example.dt", Context.MODE_PRIVATE)
         
         // button 변수 선언
         val login: Button = findViewById(R.id.login)
@@ -30,7 +41,26 @@ class MainActivity_Juyeong : AppCompatActivity() {
         }
 
         time.setOnClickListener {
-            // Button 클릭 시 수행할 작업
+            // 시작 시간 선택
+            val startHour = sharedPreferences.getInt("startHour", 0)
+            val startMinute = sharedPreferences.getInt("startMinute", 0)
+            val timePickerDialogStart = TimePickerDialog(this, { _, hourOfDay, minute ->
+                sharedPreferences.edit().putInt("startHour", hourOfDay).putInt("startMinute", minute).apply()
+
+                // 종료 시간 선택
+                val endHour = sharedPreferences.getInt("endHour", 0)
+                val endMinute = sharedPreferences.getInt("endMinute", 0)
+                val timePickerDialogEnd = TimePickerDialog(this, { _, endHourOfDay, endMinute ->
+                    sharedPreferences.edit().putInt("endHour", endHourOfDay).putInt("endMinute", endMinute).apply()
+                }, endHour, endMinute, true)
+
+                timePickerDialogEnd.setTitle("종료 시간 선택")
+                timePickerDialogEnd.show()
+
+            }, startHour, startMinute, true)
+
+            timePickerDialogStart.setTitle("시작 시간 선택")
+            timePickerDialogStart.show()
         }
 
         use_time.setOnClickListener {
