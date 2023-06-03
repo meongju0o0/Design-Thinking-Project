@@ -8,6 +8,8 @@ import android.widget.Button
 import android.content.Intent
 import android.content.Context
 import android.content.SharedPreferences
+import android.provider.Settings
+
 
 class MainActivity_Juyeong : AppCompatActivity() {
     // SharedPreferences: 클래스 간에 공유되는 변수 저장
@@ -54,7 +56,7 @@ class MainActivity_Juyeong : AppCompatActivity() {
                 }, endHour, endMinute, true)
 
                 timePickerDialogEnd.setTitle("종료 시간 선택")
-                timePickerDialogEnd.show()//....
+                timePickerDialogEnd.show()
 
             }, startHour, startMinute, true)
 
@@ -85,6 +87,7 @@ class MainActivity_Juyeong : AppCompatActivity() {
 
         bluelight.setOnClickListener {
             // 블루라이트 차단 실행
+            startActivity(Intent(Settings.ACTION_DISPLAY_SETTINGS))
         }
 
         asmr.setOnClickListener {
