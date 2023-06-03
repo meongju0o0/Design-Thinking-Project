@@ -38,7 +38,7 @@ class ASMRService : Service() {
             .setContentIntent(pendingIntent)
             .build()
 
-        startForeground(1, notification)
+        startForeground(4, notification)
         mediaPlayer?.start()
 
         return START_STICKY
@@ -61,7 +61,7 @@ class ASMRService : Service() {
                 "ASMR Service Channel",
                 NotificationManager.IMPORTANCE_DEFAULT
             )
-
+            serviceChannel.setSound(null, null) // Added to mute sound
             val manager = getSystemService(NotificationManager::class.java)
             manager?.createNotificationChannel(serviceChannel)
         }
