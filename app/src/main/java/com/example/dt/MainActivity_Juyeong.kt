@@ -79,8 +79,8 @@ class MainActivity_Juyeong : AppCompatActivity() {
 
         ad.setOnClickListener {
             // 광고 notification
-            val intent = Intent(this, AdService::class.java)
-            startService(intent)
+            // val intent = Intent(this, AdService::class.java)
+            // startService(intent)
         }
 
         bluelight.setOnClickListener {
