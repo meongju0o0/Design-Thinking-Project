@@ -79,30 +79,32 @@ class MainActivity_Juyeong : AppCompatActivity() {
 
         ad.setOnClickListener {
             // 광고 notification
+            val intent = Intent(this, AdService::class.java)
+            startService(intent)
         }
 
         bluelight.setOnClickListener {
-            // Button 클릭 시 수행할 작업
+            // 블루라이트 차단 실행
         }
 
         asmr.setOnClickListener {
-            // Button 클릭 시 수행할 작업
+            // ASMR 자동 재생
         }
 
         block.setOnClickListener {
-            // Button 클릭 시 수행할 작업
+            // 휴대폰 사용 시간 제한
         }
 
         message.setOnClickListener {
-            // Button 클릭 시 수행할 작업
+            // 이상한 메시지 전송
         }
 
         donation.setOnClickListener {
-            // Button 클릭 시 수행할 작업
+            // 자동 으로 기부
         }
 
         present.setOnClickListener {
-            // Button 클릭 시 수행할 작업
+            // 자동 선물
         }
     }
 }

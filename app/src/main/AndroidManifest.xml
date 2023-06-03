@@ -29,6 +29,7 @@
         <activity android:name=".LoginActivity" />
         <service android:name=".UseTimeService" />
         <service android:name=".SayingService" />
+        <service android:name=".AdService"/>
 
         <receiver android:name=".ResetTimeReceiver"
             android:exported="true">
