@@ -13,7 +13,7 @@ import kotlin.random.Random
 
 class SayingService : Service() {
     private lateinit var notificationManager: NotificationManager
-    private val channelId = "MyNotificationServiceChannel"
+    private val channelId = "SayingServiceChannel"
     private val sayingList: List<String> = listOf("가는 말이 고와야 오는 말이 곱다.",
         "꿈을 지녀라. 그러면 어려운 현실을 이길 수 있다.",
         "가장 훌륭한 기술은 그 어떤 도구보다도 인간적인 소양이다.",
@@ -99,7 +99,7 @@ class SayingService : Service() {
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
 
         with(NotificationManagerCompat.from(this)) {
-            notificationManager.notify(1, builder.build())
+            notificationManager.notify(2, builder.build())
         }
     }
 }

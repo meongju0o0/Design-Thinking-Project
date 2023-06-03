@@ -8,7 +8,7 @@ import androidx.core.app.NotificationCompat
 import java.util.concurrent.TimeUnit
 
 class UseTimeService : Service() {
-    private val channelId = "TimeServiceChannel"
+    private val channelId = "UseTimeServiceChannel"
     private var startTime = 0L
     private lateinit var notificationManager: NotificationManager
     private val handler = Handler(Looper.getMainLooper())

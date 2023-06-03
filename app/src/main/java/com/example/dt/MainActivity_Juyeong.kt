@@ -78,7 +78,7 @@ class MainActivity_Juyeong : AppCompatActivity() {
         }
 
         ad.setOnClickListener {
-            // Button 클릭 시 수행할 작업
+            // 광고 notification
         }
 
         bluelight.setOnClickListener {
