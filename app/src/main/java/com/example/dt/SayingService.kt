@@ -1,20 +1,17 @@
 package com.example.dt
 
-import android.Manifest
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.Service
 import android.content.Context
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.os.Build
 import android.os.IBinder
-import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
+import kotlin.random.Random
 
-class MyNotificationService : Service() {
-
+class SayingService : Service() {
     private lateinit var notificationManager: NotificationManager
     private val channelId = "MyNotificationServiceChannel"
     private val sayingList: List<String> = listOf("가는 말이 고와야 오는 말이 곱다.",
@@ -76,7 +73,7 @@ class MyNotificationService : Service() {
     override fun onCreate() {
         super.onCreate()
         createNotificationChannel()
-        showNotification("Hello, World!")
+        showNotification()
     }
 
     private fun createNotificationChannel() {
@@ -87,17 +84,18 @@ class MyNotificationService : Service() {
             val channel = NotificationChannel(channelId, name, importance).apply {
                 description = descriptionText
             }
-            val notificationManager: NotificationManager =
-                getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            channel.setSound(null, null)
+            notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
             notificationManager.createNotificationChannel(channel)
         }
     }
 
-    private fun showNotification(text: String) {
+    private fun showNotification() {
+        val randomSaying = sayingList[Random.nextInt(sayingList.size)]
         val builder = NotificationCompat.Builder(this, channelId)
             .setSmallIcon(R.drawable.ic_launcher_foreground) // Replace with your own icon
             .setContentTitle("My notification")
-            .setContentText(text)
+            .setContentText(randomSaying)
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
 
         with(NotificationManagerCompat.from(this)) {

@@ -66,7 +66,7 @@ class UseTimeService : Service() {
                     .build()
 
                 notificationManager.notify(1, notification)
-                handler.postDelayed(this, 5000)
+                handler.postDelayed(this, 10000)
             }
         })
     }

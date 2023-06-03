@@ -74,7 +74,7 @@ class MainActivity_Juyeong : AppCompatActivity() {
 
         saying.setOnClickListener {
             // 명언 notification
-            startService(Intent(this, MyNotificationService::class.java))
+            startService(Intent(this, SayingService::class.java))
         }
 
         ad.setOnClickListener {
