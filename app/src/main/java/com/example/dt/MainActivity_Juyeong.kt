@@ -3,13 +3,11 @@ package com.example.dt
 import androidx.appcompat.app.AppCompatActivity
 import android.app.TimePickerDialog
 import android.os.Bundle
+import android.os.Build
 import android.widget.Button
-import android.widget.Toast
 import android.content.Intent
 import android.content.Context
 import android.content.SharedPreferences
-
-import java.util.*
 
 class MainActivity_Juyeong : AppCompatActivity() {
     // SharedPreferences: 클래스 간에 공유되는 변수 저장
@@ -41,6 +39,7 @@ class MainActivity_Juyeong : AppCompatActivity() {
         }
 
         time.setOnClickListener {
+            // 휴대폰 사용 시간 제어
             // 시작 시간 선택
             val startHour = sharedPreferences.getInt("startHour", 0)
             val startMinute = sharedPreferences.getInt("startMinute", 0)
@@ -64,7 +63,13 @@ class MainActivity_Juyeong : AppCompatActivity() {
         }
 
         use_time.setOnClickListener {
-            // Button 클릭 시 수행할 작업
+            // 휴대폰 사용 시간 확인
+            val serviceIntent = Intent(this, UseTimeService::class.java)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                startForegroundService(serviceIntent)
+            } else {
+                startService(serviceIntent)
+            }
         }
 
         saying.setOnClickListener {
