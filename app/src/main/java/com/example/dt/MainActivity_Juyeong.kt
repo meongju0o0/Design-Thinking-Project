@@ -96,15 +96,11 @@ class MainActivity_Juyeong : AppCompatActivity() {
 
         asmr.setOnClickListener {
             // ASMR 자동 재생
-            if (mediaPlayer == null) {
-                // mediaPlayer가 null인 경우 (즉, 재생되지 않는 경우) 음악을 재생
-                mediaPlayer = MediaPlayer.create(this, R.raw.temple_bowl)
-                mediaPlayer?.start()
+            val serviceIntent = Intent(this, ASMRService::class.java)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                startForegroundService(serviceIntent)
             } else {
-                // mediaPlayer가 null이 아닌 경우 (즉, 이미 재생중인 경우) 음악을 중지하고 mediaPlayer를 해제
-                mediaPlayer?.stop()
-                mediaPlayer?.release()
-                mediaPlayer = null
+                startService(serviceIntent)
             }
         }
 
