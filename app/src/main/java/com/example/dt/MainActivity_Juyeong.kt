@@ -54,7 +54,7 @@ class MainActivity_Juyeong : AppCompatActivity() {
                 }, endHour, endMinute, true)
 
                 timePickerDialogEnd.setTitle("종료 시간 선택")
-                timePickerDialogEnd.show()
+                timePickerDialogEnd.show()//....
 
             }, startHour, startMinute, true)
 
@@ -63,7 +63,7 @@ class MainActivity_Juyeong : AppCompatActivity() {
         }
 
         use_time.setOnClickListener {
-            // 휴대폰 사용 시간 확인
+            // 휴대폰 사용 시간 notification
             val serviceIntent = Intent(this, UseTimeService::class.java)
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 startForegroundService(serviceIntent)
@@ -73,7 +73,8 @@ class MainActivity_Juyeong : AppCompatActivity() {
         }
 
         saying.setOnClickListener {
-            // Button 클릭 시 수행할 작업
+            // 명언 notification
+            startService(Intent(this, MyNotificationService::class.java))
         }
 
         ad.setOnClickListener {
