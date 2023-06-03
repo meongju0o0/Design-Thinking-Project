@@ -9,11 +9,15 @@ import android.content.Intent
 import android.content.Context
 import android.content.SharedPreferences
 import android.provider.Settings
+import android.media.MediaPlayer
 
 
 class MainActivity_Juyeong : AppCompatActivity() {
     // SharedPreferences: 클래스 간에 공유되는 변수 저장
     private lateinit var sharedPreferences: SharedPreferences
+    // MediaPlayer 객체 생성
+    private var mediaPlayer: MediaPlayer? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_juyeong)
@@ -92,6 +96,16 @@ class MainActivity_Juyeong : AppCompatActivity() {
 
         asmr.setOnClickListener {
             // ASMR 자동 재생
+            if (mediaPlayer == null) {
+                // mediaPlayer가 null인 경우 (즉, 재생되지 않는 경우) 음악을 재생
+                mediaPlayer = MediaPlayer.create(this, R.raw.temple_bowl)
+                mediaPlayer?.start()
+            } else {
+                // mediaPlayer가 null이 아닌 경우 (즉, 이미 재생중인 경우) 음악을 중지하고 mediaPlayer를 해제
+                mediaPlayer?.stop()
+                mediaPlayer?.release()
+                mediaPlayer = null
+            }
         }
 
         block.setOnClickListener {
@@ -103,7 +117,7 @@ class MainActivity_Juyeong : AppCompatActivity() {
         }
 
         donation.setOnClickListener {
-            // 자동 으로 기부
+            // 자동으로 기부
         }
 
         present.setOnClickListener {
