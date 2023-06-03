@@ -55,9 +55,7 @@ class AdService : Service() {
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
 
         with(NotificationManagerCompat.from(this)) {
-            // Using a unique ID for each notification to display multiple notifications
-            val notificationId = Random.nextInt()
-            notify(notificationId, builder.build())
+            notificationManager.notify(3, builder.build())
         }
     }
 }
