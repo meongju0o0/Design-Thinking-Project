@@ -68,7 +68,7 @@ class TouchDetectionService : Service() {
 
     private fun showToast() {
         // Toast 메시지를 출력
-        if (event_cnt > 5) {
+        if (event_cnt > 4) {
             Toast.makeText(this, "쓰지 마라고!", Toast.LENGTH_SHORT).show()
             event_cnt = 0
         }
