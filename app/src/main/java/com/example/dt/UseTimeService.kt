@@ -5,13 +5,15 @@ import android.app.*
 import android.content.Intent
 import android.os.*
 import androidx.core.app.NotificationCompat
+import java.util.concurrent.atomic.AtomicInteger
 import java.util.concurrent.TimeUnit
 
 class UseTimeService : Service() {
+    private lateinit var notificationManager: NotificationManager
     private val channelId = "UseTimeServiceChannel"
     private var startTime = 0L
-    private lateinit var notificationManager: NotificationManager
     private val handler = Handler(Looper.getMainLooper())
+    private val notificationId = AtomicInteger(0)
 
     override fun onBind(intent: Intent): IBinder? {
         return null
@@ -33,6 +35,7 @@ class UseTimeService : Service() {
             intent,
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
+        val id = notificationId.incrementAndGet() // get a new ID for the notification
 
         val notification = NotificationCompat.Builder(this, channelId)
             .setContentTitle("Time Service")
@@ -65,7 +68,7 @@ class UseTimeService : Service() {
                     .setContentIntent(pendingIntent)
                     .build()
 
-                notificationManager.notify(1, notification)
+                notificationManager.notify(id, notification)
                 handler.postDelayed(this, 10000)
             }
         })
@@ -73,16 +76,19 @@ class UseTimeService : Service() {
 
     private fun createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val serviceChannel = NotificationChannel(
-                channelId,
-                "Time Service Channel",
-                NotificationManager.IMPORTANCE_LOW // Changed from IMPORTANCE_DEFAULT to IMPORTANCE_LOW
-            )
-            serviceChannel.setSound(null, null) // Added to mute sound
+            val name = "Time Service Channel"
+            val descriptionText = "Channel for time service notifications"
+            val importance = NotificationManager.IMPORTANCE_LOW
+            val channel = NotificationChannel(channelId, name, importance).apply {
+                description = descriptionText
+                setSound(null, null)
+            }
+            // Initialize NotificationManager
             notificationManager = getSystemService(NotificationManager::class.java)
-            notificationManager.createNotificationChannel(serviceChannel)
+            notificationManager.createNotificationChannel(channel)
         }
     }
+
 
     override fun onDestroy() {
         super.onDestroy()

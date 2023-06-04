@@ -99,7 +99,7 @@ class SayingService : Service() {
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
 
         with(NotificationManagerCompat.from(this)) {
-            notificationManager.notify(2, builder.build())
+            notify(System.currentTimeMillis().toInt(), builder.build())
         }
     }
 }

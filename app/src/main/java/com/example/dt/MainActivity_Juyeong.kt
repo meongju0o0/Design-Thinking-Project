@@ -10,6 +10,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.provider.Settings
 import android.media.MediaPlayer
+import android.widget.Toast
 
 
 class MainActivity_Juyeong : AppCompatActivity() {
@@ -105,7 +106,7 @@ class MainActivity_Juyeong : AppCompatActivity() {
         }
 
         block.setOnClickListener {
-            // 휴대폰 사용 시간 제한
+            // 터치 이벤트 발생 시 알림 발생
         }
 
         message.setOnClickListener {

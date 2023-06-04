@@ -11,18 +11,20 @@ import android.os.IBinder
 import androidx.core.app.NotificationCompat
 
 class ASMRService : Service() {
+    private lateinit var notificationManager: NotificationManager
     private var mediaPlayer: MediaPlayer? = null
     private val channelId = "ASMRServiceChannel"
 
     override fun onCreate() {
         super.onCreate()
+        notificationManager = getSystemService(NotificationManager::class.java) as NotificationManager
+        createNotificationChannel()
 
         mediaPlayer = MediaPlayer.create(this, R.raw.temple_bowl)
         mediaPlayer?.isLooping = true
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        createNotificationChannel()
         val notificationIntent = Intent(this, MainActivity_Juyeong::class.java)
         val pendingIntent = PendingIntent.getActivity(
             this,
@@ -56,14 +58,16 @@ class ASMRService : Service() {
 
     private fun createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val serviceChannel = NotificationChannel(
-                channelId,
-                "ASMR Service Channel",
-                NotificationManager.IMPORTANCE_DEFAULT
-            )
-            serviceChannel.setSound(null, null) // Added to mute sound
-            val manager = getSystemService(NotificationManager::class.java)
-            manager?.createNotificationChannel(serviceChannel)
+            val name = "ASMR Service Channel"
+            val descriptionText = "Channel for ASMR service notifications"
+            val importance = NotificationManager.IMPORTANCE_DEFAULT
+            val channel = NotificationChannel(channelId, name, importance).apply {
+                description = descriptionText
+                setSound(null, null)
+            }
+
+            notificationManager.createNotificationChannel(channel)
         }
     }
+
 }
