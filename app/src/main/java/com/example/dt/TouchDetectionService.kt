@@ -16,6 +16,7 @@ class TouchDetectionService : Service() {
 
     private lateinit var windowManager: WindowManager
     private lateinit var touchView: View
+    private var event_cnt = 0
 
     override fun onCreate() {
         super.onCreate()
@@ -54,18 +55,9 @@ class TouchDetectionService : Service() {
     private val touchListener = View.OnTouchListener { view, event ->
         when (event.action) {
             MotionEvent.ACTION_DOWN -> {
-                // 터치 다운 이벤트 처리
-                showToast("터치 다운")
-                return@OnTouchListener true
-            }
-            MotionEvent.ACTION_MOVE -> {
-                // 터치 이동 이벤트 처리
-                showToast("터치 이동")
-                return@OnTouchListener true
-            }
-            MotionEvent.ACTION_UP -> {
-                // 터치 업 이벤트 처리
-                showToast("터치 업")
+                // 터치 시작 이벤트 처리
+                event_cnt++
+                showToast()
                 return@OnTouchListener true
             }
             else -> {
@@ -74,9 +66,11 @@ class TouchDetectionService : Service() {
         }
     }
 
-    private fun showToast(message: String) {
-        // TODO: 터치 이벤트에 따른 작업 수행
-        // 예시로 Toast 메시지를 출력하는 부분입니다.
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    private fun showToast() {
+        // Toast 메시지를 출력
+        if (event_cnt > 5) {
+            Toast.makeText(this, "쓰지 마라고!", Toast.LENGTH_SHORT).show()
+            event_cnt = 0
+        }
     }
 }

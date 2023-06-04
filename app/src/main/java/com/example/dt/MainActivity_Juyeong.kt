@@ -1,5 +1,6 @@
 package com.example.dt
 
+import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.app.TimePickerDialog
 import android.os.Bundle
@@ -10,7 +11,10 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.provider.Settings
 import android.media.MediaPlayer
+import android.net.Uri
 import android.widget.Toast
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 
 
 class MainActivity_Juyeong : AppCompatActivity() {
@@ -18,11 +22,19 @@ class MainActivity_Juyeong : AppCompatActivity() {
     private lateinit var sharedPreferences: SharedPreferences
     // MediaPlayer 객체 생성
     private var mediaPlayer: MediaPlayer? = null
+    private lateinit var launcher: ActivityResultLauncher<Intent>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_main_juyeong)
-        
+        launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == Activity.RESULT_OK) {
+                val serviceIntent = Intent(this, TouchDetectionService::class.java)
+                startService(serviceIntent)
+            }
+        }
+
         // sharedPreferences 객체 선언
         sharedPreferences = getSharedPreferences("com.example.dt", Context.MODE_PRIVATE)
         
@@ -107,6 +119,16 @@ class MainActivity_Juyeong : AppCompatActivity() {
 
         block.setOnClickListener {
             // 터치 이벤트 발생 시 알림 발생
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                if (!Settings.canDrawOverlays(this)) {
+                    val overlayIntent = Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+                        Uri.parse("package:" + packageName))
+                    launcher.launch(overlayIntent)
+                } else {
+                    val serviceIntent = Intent(this, TouchDetectionService::class.java)
+                    startService(serviceIntent)
+                }
+            }
         }
 
         message.setOnClickListener {
