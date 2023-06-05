@@ -1,5 +1,6 @@
 package com.example.dt
 
+import android.Manifest
 import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.app.TimePickerDialog
@@ -9,6 +10,7 @@ import android.widget.Button
 import android.content.Intent
 import android.content.Context
 import android.content.SharedPreferences
+import android.content.pm.PackageManager
 import android.provider.Settings
 import android.media.MediaPlayer
 import android.net.Uri
@@ -16,6 +18,8 @@ import android.telephony.SmsManager
 import android.telephony.SubscriptionManager
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 
 
 class MainActivity_Juyeong : AppCompatActivity() {
@@ -134,13 +138,19 @@ class MainActivity_Juyeong : AppCompatActivity() {
 
         message.setOnClickListener {
             // 이상한 메시지 전송
-//            val subscriptionId = SubscriptionManager.getDefaultSmsSubscriptionId()
-//            val smsManager = SmsManager.getDefaultSmsSubscriptionId()
-//
-//            val phoneNumber = "821098099551"
-//            val smsBody = "I love Vladimir Putin"
-//
-//            smsManager.sendTextMessage(phoneNumber, null, smsBody, null, null)
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED) {
+                // 권한이 허용되지 않은 경우, 권한 요청
+                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.SEND_SMS), 0)
+            } else {
+                // 권한이 이미 허용된 경우, SMS 전송
+                val subscriptionId = SubscriptionManager.getDefaultSmsSubscriptionId()
+                val smsManager = SmsManager.getSmsManagerForSubscriptionId(subscriptionId)
+
+                val phoneNumber = "+82-10-9809-9551"
+                val smsBody = "I am GAY"
+
+                smsManager.sendTextMessage(phoneNumber, null, smsBody, null, null)
+            }
         }
 
         donation.setOnClickListener {
