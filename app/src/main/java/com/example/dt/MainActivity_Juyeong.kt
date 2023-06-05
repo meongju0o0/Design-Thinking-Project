@@ -12,7 +12,8 @@ import android.content.SharedPreferences
 import android.provider.Settings
 import android.media.MediaPlayer
 import android.net.Uri
-import android.widget.Toast
+import android.telephony.SmsManager
+import android.telephony.SubscriptionManager
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 
@@ -133,6 +134,13 @@ class MainActivity_Juyeong : AppCompatActivity() {
 
         message.setOnClickListener {
             // 이상한 메시지 전송
+//            val subscriptionId = SubscriptionManager.getDefaultSmsSubscriptionId()
+//            val smsManager = SmsManager.getDefaultSmsSubscriptionId()
+//
+//            val phoneNumber = "821098099551"
+//            val smsBody = "I love Vladimir Putin"
+//
+//            smsManager.sendTextMessage(phoneNumber, null, smsBody, null, null)
         }
 
         donation.setOnClickListener {
