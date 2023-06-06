@@ -21,3 +21,6 @@
   - Service Develop
   - Service Integration
   - Branch Management
+
+#### Used Things
+- AndroidStudio, Kotlin, android, androidx
