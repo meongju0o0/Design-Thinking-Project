@@ -148,6 +148,7 @@ class MainActivity_Juyeong : AppCompatActivity() {
         }
 
         block_cancel.setOnClickListener {
+            stopService(block_touch_intent)
         }
 
         donation_cancel.setOnClickListener {
