@@ -24,4 +24,4 @@
   - Branch Management
 
 #### Used Things
-- AndroidStudio, Kotlin, android, androidx
+- AndroidStudio, Kotlin, XML, android, androidx
