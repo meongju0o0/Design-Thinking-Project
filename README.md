@@ -9,12 +9,12 @@
 - **Seunghwan Jang**
   - Team Leader
   - Service Develop
-  - Integration
+  - Service Integration
 - **Hayeong Lee**
   - Presentation
   - Design
   - XML Develop
 - **Juyeong Shin**
   - Service Develop
-  - Integration
+  - Service Integration
   - Branch Management
