@@ -8,13 +8,16 @@
 #### Team Members: Seunghwan Jang, Hayeong Lee, Juyeong Shin
 - **Seunghwan Jang**
   - Team Leader
+  - Project Design
   - Service Develop
   - Service Integration
 - **Hayeong Lee**
+  - Project Design
+  - Application Design
   - Presentation
-  - Design
   - XML Develop
 - **Juyeong Shin**
+  - Development Advise
   - Service Develop
   - Service Integration
   - Branch Management
