@@ -46,6 +46,7 @@ class MainActivity_Juyeong : AppCompatActivity() {
         // button 변수 선언
         val login: Button = findViewById(R.id.login)
         val time: Button = findViewById(R.id.time)
+        // challenge 시작 버튼 변수
         val use_time: Button = findViewById(R.id.use_time)
         val saying: Button = findViewById(R.id.saying)
         val ad: Button = findViewById(R.id.ad)
@@ -55,6 +56,16 @@ class MainActivity_Juyeong : AppCompatActivity() {
         val message: Button = findViewById(R.id.message)
         val donation: Button = findViewById(R.id.donation)
         val present: Button = findViewById(R.id.present)
+        // challenge 취소 버튼 변수
+        val use_time_cancel: Button = findViewById(R.id.use_time_cancel)
+        val saying_cancel: Button = findViewById(R.id.saying_cancel)
+        val ad_cancel: Button = findViewById(R.id.ad_cancel)
+        val bluelight_cancel: Button = findViewById(R.id.bluelight_cancel)
+        val asmr_cancel: Button = findViewById(R.id.asmr_cancel)
+        val block_cancel: Button = findViewById(R.id.block_cancel)
+        val message_cancel: Button = findViewById(R.id.message_cancel)
+        val donation_cancel: Button = findViewById(R.id.donation_cancel)
+        val present_cancel: Button = findViewById(R.id.present_cancel)
 
         login.setOnClickListener {
             // login 기능
