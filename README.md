@@ -2,7 +2,7 @@
 - **Final Prototype of Design Thinking for the First Semester of 2023**
 - **Life Balancing Application for Android**
 
-#### Application Name: 굿잠 (Good-Sleep)
+#### Application Name: 굿나잇 (Good Night)
 
 #### Team Name: TEMP
 
