@@ -163,21 +163,21 @@
                 android:id="@+id/message_cancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="취소"
+                android:text="멍텅구리"
                 android:layout_gravity="center" />
 
             <Button
                 android:id="@+id/donation_cancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="취소"
+                android:text="멍텅구리"
                 android:layout_gravity="center" />
 
             <Button
                 android:id="@+id/present_cancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="취소"
+                android:text="멍텅구리"
                 android:layout_gravity="center" />
 
         </LinearLayout>

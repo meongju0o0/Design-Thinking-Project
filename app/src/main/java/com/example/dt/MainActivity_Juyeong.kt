@@ -143,11 +143,11 @@ class MainActivity_Juyeong : AppCompatActivity() {
 
         // 취소 버튼
         use_time_cancel.setOnClickListener {
-
+            stopService(use_time_intent)
         }
 
         saying_cancel.setOnClickListener {
-
+            stopService(saying_intent)
         }
 
         ad_cancel.setOnClickListener {
@@ -155,19 +155,16 @@ class MainActivity_Juyeong : AppCompatActivity() {
         }
 
         bluelight_cancel.setOnClickListener {
-
+            stopService(bluelight_intent)
         }
 
         asmr_cancel.setOnClickListener {
-
+            stopService(asmr_intent)
         }
 
         block_cancel.setOnClickListener {
-
-        }
-
-        message_cancel.setOnClickListener {
-
+            stopService(overlayIntent)
+            stopService(serviceIntent)
         }
 
         donation_cancel.setOnClickListener {
