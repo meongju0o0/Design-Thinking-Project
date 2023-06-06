@@ -1,5 +1,4 @@
 ## Design Thinking Project
-- **2023 1학기 디자인적사고 최종 프로토타입**
 - **Final Prototype of Design Thinking for the First Semester of 2023**
 - **Life Balancing Application for Android**
 
