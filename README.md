@@ -1,7 +1,7 @@
 ## Design Thinking Project
 **2023 1학기 디자인적사고 최종 프로토타입**
 **Life Balancing Application for Android**
-<br/><br/>
+
 #### Application Name: 굿잠 (Good-Jam)
 
 #### Team Name: TEMP
