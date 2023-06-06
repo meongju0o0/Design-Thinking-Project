@@ -2,7 +2,7 @@
 - **2023 1학기 디자인적사고 최종 프로토타입**
 - **Life Balancing Application for Android**
 
-#### Application Name: 굿잠 (Good-Jam)
+#### Application Name: 굿잠 (Good-Sleep)
 
 #### Team Name: TEMP
 
