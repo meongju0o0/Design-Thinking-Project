@@ -15,7 +15,7 @@
 - [**Hayeong Lee**](https://github.com/youngyoung2345)
   - Project Design
   - Application Design
-  - Presentation
+  - PPT Design
   - XML Develop
 - [**Juyeong Shin**](https://github.com/meongju0o0)
   - Development Advise
