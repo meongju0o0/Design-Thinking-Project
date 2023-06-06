@@ -137,5 +137,41 @@ class MainActivity_Juyeong : AppCompatActivity() {
         present.setOnClickListener {
             // 자동 선물
         }
+
+        use_time_cancel.setOnClickListener {
+
+        }
+
+        saying_cancel.setOnClickListener {
+
+        }
+
+        ad_cancel.setOnClickListener {
+
+        }
+
+        bluelight_cancel.setOnClickListener {
+
+        }
+
+        asmr_cancel.setOnClickListener {
+
+        }
+
+        block_cancel.setOnClickListener {
+
+        }
+
+        message_cancel.setOnClickListener {
+
+        }
+
+        donation_cancel.setOnClickListener {
+
+        }
+
+        present_cancel.setOnClickListener {
+
+        }
     }
 }
