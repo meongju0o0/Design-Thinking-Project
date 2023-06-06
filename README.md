@@ -6,3 +6,15 @@
 #### Team Name: TEMP
 
 #### Team Members: Seunghwan Jang, Hayeong Lee, Juyeong Shin
+- Seunghwan Jang
+  - Team Leader
+  - Service Develop
+  - Integration
+- Hayeong Lee
+  - Presentation
+  - Design
+  - XML Develop
+- Juyeong Shin
+  - Service Develop
+  - Integration
+  - Branch Management
