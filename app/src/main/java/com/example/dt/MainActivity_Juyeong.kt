@@ -10,7 +10,6 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.provider.Settings
 import android.media.MediaPlayer
-import android.net.Uri
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 
@@ -64,9 +63,7 @@ class MainActivity_Juyeong : AppCompatActivity() {
         val saying_intent = Intent(this, SayingService::class.java)
         val bluelight_intent = Intent(Settings.ACTION_DISPLAY_SETTINGS)
         val asmr_intent = Intent(this, ASMRService::class.java)
-        val overlayIntent = Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
-            Uri.parse("package:" + packageName))
-        val serviceIntent = Intent(this, TouchDetectionService::class.java)
+        val block_touch_intent = Intent(this, BlockTouchService::class.java)
         val message_sending = MessageSending(this)
 
         login.setOnClickListener {
@@ -117,13 +114,7 @@ class MainActivity_Juyeong : AppCompatActivity() {
 
         block.setOnClickListener {
             // 터치 이벤트 발생 시 알림 발생
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                if (!Settings.canDrawOverlays(this)) {
-                    launcher.launch(overlayIntent)
-                } else {
-                    startService(serviceIntent)
-                }
-            }
+            startService(block_touch_intent)
         }
 
         message.setOnClickListener {
@@ -157,8 +148,6 @@ class MainActivity_Juyeong : AppCompatActivity() {
         }
 
         block_cancel.setOnClickListener {
-            stopService(overlayIntent)
-            stopService(serviceIntent)
         }
 
         donation_cancel.setOnClickListener {

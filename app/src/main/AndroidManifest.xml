@@ -40,7 +40,7 @@
         <activity android:name=".LoginActivity" />
         <service android:name=".UseTimeService" />
         <service android:name=".SayingService" />
-        <service android:name=".AdService"/>
+        <service android:name=".AdService" />
         <service
             android:name=".ASMRService"
             android:enabled="true"
@@ -51,6 +51,7 @@
             android:name=".TouchDetectionService"
             android:foregroundServiceType="dataSync"
             android:stopWithTask="false" />
+        <service android:name=".BlockTouchService" />
 
         <receiver android:name=".ResetTimeReceiver"
             android:exported="true">
