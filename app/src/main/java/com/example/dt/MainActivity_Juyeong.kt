@@ -53,10 +53,8 @@ class MainActivity_Juyeong : AppCompatActivity() {
         val use_time_cancel: Button = findViewById(R.id.use_time_cancel)
         val saying_cancel: Button = findViewById(R.id.saying_cancel)
         val ad_cancel: Button = findViewById(R.id.ad_cancel)
-        val bluelight_cancel: Button = findViewById(R.id.bluelight_cancel)
         val asmr_cancel: Button = findViewById(R.id.asmr_cancel)
         val block_cancel: Button = findViewById(R.id.block_cancel)
-        val message_cancel: Button = findViewById(R.id.message_cancel)
         val donation_cancel: Button = findViewById(R.id.donation_cancel)
         val present_cancel: Button = findViewById(R.id.present_cancel)
 
@@ -152,10 +150,6 @@ class MainActivity_Juyeong : AppCompatActivity() {
 
         ad_cancel.setOnClickListener {
 
-        }
-
-        bluelight_cancel.setOnClickListener {
-            stopService(bluelight_intent)
         }
 
         asmr_cancel.setOnClickListener {
