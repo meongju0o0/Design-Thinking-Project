@@ -60,33 +60,41 @@ class MainActivity_Juyeong : AppCompatActivity() {
         val donation_cancel: Button = findViewById(R.id.donation_cancel)
         val present_cancel: Button = findViewById(R.id.present_cancel)
 
+        val login_intent = Intent(this, LoginActivity::class.java)
+        val time_setting = TimeSetting(this)
+        val use_time_intent = Intent(this, UseTimeService::class.java)
+        val saying_intent = Intent(this, SayingService::class.java)
+        val bluelight_intent = Intent(Settings.ACTION_DISPLAY_SETTINGS)
+        val asmr_intent = Intent(this, ASMRService::class.java)
+        val overlayIntent = Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+            Uri.parse("package:" + packageName))
+        val serviceIntent = Intent(this, TouchDetectionService::class.java)
+        val message_sending = MessageSending(this)
+
         login.setOnClickListener {
             // login 기능
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
+            startActivity(login_intent)
         }
 
         time.setOnClickListener {
             // 휴대폰 사용 시간 제어
-            val TimeSetting = TimeSetting(this)
             time.setOnClickListener {
-                TimeSetting.showTimePickerDialog()
+                time_setting.showTimePickerDialog()
             }
         }
 
         use_time.setOnClickListener {
             // 휴대폰 사용 시간 notification
-            val serviceIntent = Intent(this, UseTimeService::class.java)
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                startForegroundService(serviceIntent)
+                startForegroundService(use_time_intent)
             } else {
-                startService(serviceIntent)
+                startService(use_time_intent)
             }
         }
 
         saying.setOnClickListener {
             // 명언 notification
-            startService(Intent(this, SayingService::class.java))
+            startService(saying_intent)
         }
 
         ad.setOnClickListener {
@@ -97,16 +105,15 @@ class MainActivity_Juyeong : AppCompatActivity() {
 
         bluelight.setOnClickListener {
             // 블루라이트 차단 실행
-            startActivity(Intent(Settings.ACTION_DISPLAY_SETTINGS))
+            startActivity(bluelight_intent)
         }
 
         asmr.setOnClickListener {
             // ASMR 자동 재생
-            val serviceIntent = Intent(this, ASMRService::class.java)
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                startForegroundService(serviceIntent)
+                startForegroundService(asmr_intent)
             } else {
-                startService(serviceIntent)
+                startService(asmr_intent)
             }
         }
 
@@ -114,11 +121,8 @@ class MainActivity_Juyeong : AppCompatActivity() {
             // 터치 이벤트 발생 시 알림 발생
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 if (!Settings.canDrawOverlays(this)) {
-                    val overlayIntent = Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
-                        Uri.parse("package:" + packageName))
                     launcher.launch(overlayIntent)
                 } else {
-                    val serviceIntent = Intent(this, TouchDetectionService::class.java)
                     startService(serviceIntent)
                 }
             }
@@ -126,7 +130,6 @@ class MainActivity_Juyeong : AppCompatActivity() {
 
         message.setOnClickListener {
             // 이상한 메시지 전송
-            val message_sending = MessageSending(this)
             message_sending.sendSms()
         }
 
@@ -138,6 +141,7 @@ class MainActivity_Juyeong : AppCompatActivity() {
             // 자동 선물
         }
 
+        // 취소 버튼
         use_time_cancel.setOnClickListener {
 
         }
