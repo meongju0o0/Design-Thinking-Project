@@ -25,5 +25,3 @@
 
 #### Used Things
 - AndroidStudio, Kotlin, XML, android, androidx
-
-temp
