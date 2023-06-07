@@ -13,6 +13,42 @@
         android:theme="@style/Theme.DT"
         tools:targetApi="31">
         <activity
+            android:name=".SocialchallengeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SetpresentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CanclechallengeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InitsettingActivityActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".SetdutationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SetdonateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SetmessageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OnchallengeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".challengeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InitsettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TermsActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

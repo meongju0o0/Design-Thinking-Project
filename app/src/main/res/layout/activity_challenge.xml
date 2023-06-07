@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:saveEnabled="true"
+    tools:context=".challengeActivity">
+
+    <!-- 버튼 1 -->
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/illust4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/button1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:backgroundTint="#00FFFFFF"
+        android:forceDarkAllowed="false"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/down"
+        app:tint="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"/>
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/button1_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="속도 저하"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/button1"
+        app:layout_constraintStart_toStartOf="@id/button1"
+        app:layout_constraintEnd_toEndOf="@id/button1"
+        android:layout_marginTop="8dp"/>
+
+    <!-- 버튼 2 -->
+    <ImageButton
+        android:id="@+id/button2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:backgroundTint="#00FFFFFF"
+        android:forceDarkAllowed="false"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/free_icon_envelope_481659"
+        app:tint="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="100dp"/>
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/button2_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="메시지 보내기"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/button2"
+        app:layout_constraintStart_toStartOf="@id/button2"
+        app:layout_constraintEnd_toEndOf="@id/button2"
+        android:layout_marginTop="8dp"/>
+
+    <!-- 버튼 3 -->
+    <ImageButton
+        android:id="@+id/button3"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:backgroundTint="#00FFFFFF"
+        android:forceDarkAllowed="false"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/free_icon_supermarket_gift_372768"
+        app:tint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="100dp"/>
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/button3_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="선물하기"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/button3"
+        app:layout_constraintStart_toStartOf="@id/button3"
+        app:layout_constraintEnd_toEndOf="@id/button3"
+        android:layout_marginTop="8dp"/>
+
+    <!-- 버튼 4 -->
+    <ImageButton
+        android:id="@+id/button4"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:backgroundTint="#00FFFFFF"
+        android:forceDarkAllowed="false"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/free_icon_donation_4794730"
+        app:tint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="100dp"
+        android:layout_marginEnd="50dp"/>
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/button4_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="기부하기"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/button4"
+        app:layout_constraintStart_toStartOf="@id/button4"
+        app:layout_constraintEnd_toEndOf="@id/button4"
+        android:layout_marginTop="8dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
