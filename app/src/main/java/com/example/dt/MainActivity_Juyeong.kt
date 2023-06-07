@@ -34,7 +34,7 @@ class MainActivity_Juyeong : AppCompatActivity() {
 
         // sharedPreferences 객체 선언
         sharedPreferences = getSharedPreferences("com.example.dt", Context.MODE_PRIVATE)
-        
+
         // button 변수 선언
         val login: Button = findViewById(R.id.login)
         val time: Button = findViewById(R.id.time)
