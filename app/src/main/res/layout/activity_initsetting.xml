@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/illust4"
+    tools:context=".InitsettingActivity"
+    >
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="wrap_content"
+        android:layout_height="67dp"
+        android:layout_weight="1"
+        android:layout_marginStart = "10sp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="기본 환경 설정"
+        android:textStyle = "bold"
+        android:textColor = "#FFFFFF"/>
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart = "10sp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="> 시작 시간"
+        android:textStyle = "bold"
+        android:textColor = "#FFFFFF"/>
+
+    <TimePicker
+        android:id="@+id/timePicker1"
+        android:layout_width="279dp"
+        android:layout_height="60sp"
+        android:timePickerMode="spinner"
+        android:layout_gravity="center"
+        android:background="#FFFFFF"
+        android:alpha="0.5"/>
+
+    <TextView
+        android:id="@+id/time_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timePicker1"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart = "10sp"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:textStyle = "bold"
+        android:textColor = "#FFFFFF"/>
+
+    <EditText
+        android:id="@+id/editTextText4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart = "10sp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="> 종료 시간"
+        android:textStyle = "bold"
+        android:textColor = "#FFFFFF"/>
+
+    <TimePicker
+        android:id="@+id/timePicker2"
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="#FFFFFF"
+        android:timePickerMode="spinner"
+        android:alpha="0.5"/>
+
+    <TextView
+        android:id="@+id/time_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timePicker2"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart = "10sp"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:textStyle = "bold"
+        android:textColor = "#FFFFFF"/>
+
+    <EditText
+        android:id="@+id/editTextText3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart = "10sp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="> 기능"
+        android:textSize = "18sp"
+        android:textStyle = "bold"
+        android:textColor = "#FFFFFF"
+        />
+
+    <CheckBox
+        android:id="@+id/check1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart = "10sp"
+        android:text="앱 사용 시간"
+        android:textStyle = "bold"
+        android:textColor = "#FFFFFF"/>
+
+    <CheckBox
+        android:id="@+id/check2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart = "10sp"
+        android:text="명언 팝업"
+        android:textSize = "18sp"
+        android:textStyle = "bold"
+        android:textColor = "#FFFFFF"/>
+
+    <CheckBox
+        android:id="@+id/check3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart = "10sp"
+        android:text="블루라이트"
+        android:textSize = "18sp"
+        android:textStyle = "bold"
+        android:textColor = "#FFFFFF"/>
+
+    <CheckBox
+        android:id="@+id/check4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart = "10sp"
+        android:text="ASMR"
+        android:textSize = "18sp"
+        android:textStyle = "bold"
+        android:textColor = "#FFFFFF"/>
+
+    <Button
+        android:id="@+id/apply"
+        android:layout_width="107dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom = "15sp"
+        android:backgroundTint="#FFFFFF"
+        android:textSize = "18sp"
+        android:text="적용"
+        android:textColor="#21243C"
+        android:textStyle="bold"
+        android:layout_gravity = "center"/>
+
+</LinearLayout>

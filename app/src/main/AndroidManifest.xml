@@ -29,6 +29,45 @@
             android:value="ca-app-pub-6936716032523241~6952420880"/>
 
         <activity
+            android:name=".MainActivity_Juyeong"
+            android:exported="false" />
+        <activity
+            android:name=".SocialchallengeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SetpresentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CanclechallengeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InitsettingActivityActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".SetdutationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SetdonateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SetmessageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OnchallengeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".challengeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InitsettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TermsActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -37,28 +76,30 @@
             </intent-filter>
         </activity>
 
-<!--        <activity android:name=".LoginActivity" />-->
-<!--        <service android:name=".UseTimeService" />-->
-<!--        <service android:name=".SayingService" />-->
-<!--        <service android:name=".AdService"/>-->
-<!--        <service-->
-<!--            android:name=".ASMRService"-->
-<!--            android:enabled="true"-->
-<!--            android:exported="false"-->
-<!--            android:foregroundServiceType="mediaPlayback"-->
-<!--            />-->
-<!--        <service-->
-<!--            android:name=".TouchDetectionService"-->
-<!--            android:foregroundServiceType="dataSync"-->
-<!--            android:stopWithTask="false" />-->
+        <activity android:name=".LoginActivity" />
+        <service android:name=".UseTimeService" />
+        <service android:name=".SayingService" />
+        <service android:name=".AdService" />
+        <service
+            android:name=".ASMRService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="mediaPlayback"
+            />
+        <service
+            android:name=".TouchDetectionService"
+            android:foregroundServiceType="dataSync"
+            android:stopWithTask="false" />
+        <service android:name=".BlockTouchService" />
 
-<!--        <receiver android:name=".ResetTimeReceiver"-->
-<!--            android:exported="true">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.TIME_SET" />-->
-<!--                <action android:name="android.intent.action.TIMEZONE_CHANGED" />-->
-<!--            </intent-filter>-->
-<!--        </receiver>-->
+        <receiver android:name=".ResetTimeReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>
