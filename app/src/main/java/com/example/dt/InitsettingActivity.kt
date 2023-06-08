@@ -34,23 +34,19 @@ class InitsettingActivity : AppCompatActivity() {
         val apply: Button = findViewById(R.id.apply)
 
         use_time.setOnCheckedChangeListener { buttonView, isChecked ->
-            if (isChecked) {chk_use_time = true}
-            else {chk_use_time = false}
+            chk_use_time = isChecked
         }
 
         saying.setOnCheckedChangeListener { buttonView, isChecked ->
-            if (isChecked) {chk_saying = true}
-            else {chk_saying = false}
+            chk_saying = isChecked
         }
 
         bluelight.setOnCheckedChangeListener { buttonView, isChecked ->
-            if (isChecked) {chk_bluelight = true}
-            else {chk_bluelight = false}
+            chk_bluelight = isChecked
         }
 
         asmr.setOnCheckedChangeListener { buttonView, isChecked ->
-            if (isChecked) {chk_asmr = true}
-            else {chk_asmr = false}
+            chk_asmr = isChecked
         }
 
         apply.setOnClickListener {
