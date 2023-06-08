@@ -1,0 +1,187 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".MainActivity_Juyeong">
+
+    <LinearLayout
+        android:id="@+id/topContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="로그인"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="시간 및 시각"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/leftContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginEnd="8dp">
+
+            <Button
+                android:id="@+id/use_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="앱 사용 시간 표시"
+                android:layout_gravity="center" />
+
+            <Button
+                android:id="@+id/saying"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="명언 팝업" />
+
+            <Button
+                android:id="@+id/ad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="광고 팝업"
+                android:layout_gravity="center" />
+
+            <Button
+                android:id="@+id/bluelight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="블루라이트"
+                android:layout_gravity="center" />
+
+            <Button
+                android:id="@+id/asmr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ASMR"
+                android:layout_gravity="center" />
+
+            <Button
+                android:id="@+id/block"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="차단하기"
+                android:layout_gravity="center" />
+
+            <Button
+                android:id="@+id/message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="메시지"
+                android:layout_gravity="center" />
+
+            <Button
+                android:id="@+id/donation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="기부하기"
+                android:layout_gravity="center" />
+
+            <Button
+                android:id="@+id/present"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="선물하기"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rightContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp">
+
+            <Button
+                android:id="@+id/use_time_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="취소"
+                android:layout_gravity="center" />
+
+            <Button
+                android:id="@+id/saying_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="취소" />
+
+            <Button
+                android:id="@+id/ad_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="취소"
+                android:layout_gravity="center" />
+
+            <Button
+                android:id="@+id/bluelight_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="취소"
+                android:layout_gravity="center" />
+
+            <Button
+                android:id="@+id/asmr_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="취소"
+                android:layout_gravity="center" />
+
+            <Button
+                android:id="@+id/block_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="취소"
+                android:layout_gravity="center" />
+
+            <Button
+                android:id="@+id/message_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="멍텅구리"
+                android:layout_gravity="center" />
+
+            <Button
+                android:id="@+id/donation_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="멍텅구리"
+                android:layout_gravity="center" />
+
+            <Button
+                android:id="@+id/present_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="멍텅구리"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
