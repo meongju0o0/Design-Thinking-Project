@@ -31,7 +31,6 @@ class InitsettingActivity : AppCompatActivity() {
         var chk_bluelight = false
         var chk_asmr = false
 
-
         val apply: Button = findViewById(R.id.apply)
 
         use_time.setOnCheckedChangeListener { buttonView, isChecked ->
