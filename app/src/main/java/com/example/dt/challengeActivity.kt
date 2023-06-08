@@ -16,14 +16,14 @@ class challengeActivity : AppCompatActivity() {
         val donate: ImageButton = findViewById(R.id.button4)
 
         val block_touch_intent = Intent(this, BlockTouchService::class.java)
+        val message_sending = MessageSending(this)
 
         block.setOnClickListener {
             startActivity(block_touch_intent)
         }
 
         message.setOnClickListener {
-            val intent = Intent(this, SetmessageActivity::class.java)
-            startActivity(intent)
+            message_sending.sendSms()
         }
 
         present.setOnClickListener {
