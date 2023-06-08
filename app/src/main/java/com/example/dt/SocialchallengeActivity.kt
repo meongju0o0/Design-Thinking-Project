@@ -10,33 +10,32 @@ class SocialchallengeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_socialchallenge)
         // var declare
-        val apply: Button = findViewById(R.id.button)
-        val apply1: Button = findViewById(R.id.button1)
-        val apply2: Button = findViewById(R.id.button2)
-        val apply3: Button = findViewById(R.id.button3)
-        val apply4: Button = findViewById(R.id.button4)
+        val myself: Button = findViewById(R.id.button)
+        val social1: Button = findViewById(R.id.button1)
+        val social2: Button = findViewById(R.id.button2)
+        val social3: Button = findViewById(R.id.button3)
+        val social4: Button = findViewById(R.id.button4)
 
 
-        apply.setOnClickListener {
+        myself.setOnClickListener {
             val intent = Intent(this, challengeActivity::class.java)
             startActivity(intent)
         }
-        apply1.setOnClickListener {
+        social1.setOnClickListener {
             val intent = Intent(this, OnchallengeActivity::class.java)
             startActivity(intent)
         }
-        apply2.setOnClickListener {
+        social2.setOnClickListener {
             val intent = Intent(this, OnchallengeActivity::class.java)
             startActivity(intent)
         }
-        apply3.setOnClickListener {
+        social3.setOnClickListener {
             val intent = Intent(this, OnchallengeActivity::class.java)
             startActivity(intent)
         }
-        apply4.setOnClickListener {
+        social4.setOnClickListener {
             val intent = Intent(this, OnchallengeActivity::class.java)
             startActivity(intent)
         }
     }
-
 }
