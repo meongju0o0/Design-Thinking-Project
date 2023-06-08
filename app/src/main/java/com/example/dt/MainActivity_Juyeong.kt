@@ -57,7 +57,6 @@ class MainActivity_Juyeong : AppCompatActivity() {
         val donation_cancel: Button = findViewById(R.id.donation_cancel)
         val present_cancel: Button = findViewById(R.id.present_cancel)
 
-        val login_intent = Intent(this, LoginActivity::class.java)
         val time_setting = TimeSetting(this)
         val use_time_intent = Intent(this, UseTimeService::class.java)
         val saying_intent = Intent(this, SayingService::class.java)
@@ -65,11 +64,6 @@ class MainActivity_Juyeong : AppCompatActivity() {
         val asmr_intent = Intent(this, ASMRService::class.java)
         val block_touch_intent = Intent(this, BlockTouchService::class.java)
         val message_sending = MessageSending(this)
-
-        login.setOnClickListener {
-            // login 기능
-            startActivity(login_intent)
-        }
 
         time.setOnClickListener {
             // 휴대폰 사용 시간 제어
