@@ -1,6 +1,7 @@
 package com.example.dt
 
 import android.content.Intent
+import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
@@ -17,9 +18,15 @@ class challengeActivity : AppCompatActivity() {
 
         val block_touch_intent = Intent(this, BlockTouchService::class.java)
         val message_sending = MessageSending(this)
+        val isActivityRunning = isActivityRunning(block_touch_intent)
 
         block.setOnClickListener {
-            startActivity(block_touch_intent)
+            if (!isActivityRunning) {
+                startService(block_touch_intent)
+            }
+            else {
+                stopService(block_touch_intent)
+            }
         }
 
         message.setOnClickListener {
@@ -35,5 +42,12 @@ class challengeActivity : AppCompatActivity() {
             val intent = Intent(this, SetdonateActivity::class.java)
             startActivity(intent)
         }
+    }
+
+
+    private fun isActivityRunning(intent: Intent): Boolean {
+        val packageManager = packageManager
+        val activities = packageManager.queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY)
+        return activities.isNotEmpty()
     }
 }
