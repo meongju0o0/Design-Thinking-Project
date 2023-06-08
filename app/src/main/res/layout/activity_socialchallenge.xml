@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/illust4"
+    android:saveEnabled="true"
+    tools:context=".SocialchallengeActivity">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginBottom="10dp"
+        android:text="혼자하기"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginStart="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- HorizontalScrollView의 경우 안에 있는 뷰의 width값이 무조건 wrap_content로 됨-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <ImageButton
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="#FFFFFF"
+                    android:forceDarkAllowed="false"
+                    android:scaleType="centerInside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/honey_combo"/>
+
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:text="밤에는 잠을자고 낮에는 허니콤보\n  6월10일~6월20일, 22:00 ~ 04:00\n 참가비:15,000원"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
+                android:orientation="vertical">
+                <ImageButton
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="#FFFFFF"
+                    android:forceDarkAllowed="false"
+                    android:scaleType="centerInside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/coffe"/>
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:text="방학간 갓생 프로젝트\n  7월10일~8월20일, 01:00 ~ 06:00\n 참가비:3,000원"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
+                android:orientation="vertical">
+                <ImageButton
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="#FFFFFF"
+                    android:forceDarkAllowed="false"
+                    android:scaleType="centerInside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/free_icon_donation_4794730"/>
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:text="주말 용돈 챙기기\n  6월19일~6월23일, 11:00 ~ 06:00\n 참가비:5,000원"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
+                android:orientation="vertical">
+                <ImageButton
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="#FFFFFF"
+                    android:forceDarkAllowed="false"
+                    android:scaleType="centerInside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/free_icon_donation_4794730"/>
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:text="겨울방학은 해외로\n  9월1일~12월20일, 12:00 ~ 06:00\n 참가비:100,000원"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:saveEnabled="true"
+    tools:context=".SetdonateActivity">
+
+    <!-- 적십자 / 유니세프 등은 너무 추상적인 것 같아 계좌 번호 입력 가능하게 수정 -->
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/illust4"
+        android:gravity = "center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:layout_marginStart = "10sp"
+                android:text="금액:  "
+                android:textColor = "#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity = "center"/>
+
+            <EditText
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd = "200sp"
+                android:background = "#FFFFFF"
+                android:textColor = "#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity = "center"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18sp"
+                android:layout_marginTop="20sp"
+                android:layout_weight="0.5"
+                android:gravity="left"
+                android:text="계좌 번호: "
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/textView21"
+                android:layout_width="49dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:layout_marginEnd = "20sp"
+                android:layout_weight="0.25"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:layout_weight="0.5"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop = "20sp"
+                android:text = " - "
+                android:textColor = "#FFFFFF"
+                android:textStyle = "bold"
+                />
+
+            <EditText
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:layout_weight="0.5"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop = "20sp"
+                android:text = " - "
+                android:textColor = "#FFFFFF"
+                android:textStyle = "bold"
+                />
+
+            <EditText
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:layout_weight="0.5"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop = "20sp"
+                android:text = " - "
+                android:textColor = "#FFFFFF"
+                android:textStyle = "bold"
+                />
+
+            <EditText
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:layout_marginEnd="10sp"
+                android:layout_weight="0.5"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop = "50sp"
+            android:backgroundTint="#FFFFFF"
+            android:text="확인"
+            android:textAllCaps="false"
+            android:textColor="#21243C"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
