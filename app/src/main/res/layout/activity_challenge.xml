@@ -40,7 +40,7 @@
         android:id="@+id/button1_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="속도 저하"
+        android:text="이용 차단"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@id/button1"
