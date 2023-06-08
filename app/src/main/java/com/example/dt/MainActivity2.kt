@@ -19,6 +19,7 @@ class MainActivity2 : AppCompatActivity() {
             val intent = Intent(this, SocialchallengeActivity::class.java)
             startActivity(intent)
         }
+
         setting.setOnClickListener {
             val intent = Intent(this, InitsettingActivity::class.java)
             startActivity(intent)
